@@ -22,11 +22,11 @@ export class UserComponent implements OnInit {
 
   save(){
     return this.http.put(this.url, this.user, httpOptions).subscribe(() => {
-      this.goBack();
+      this.update();
     });
   }
 
-  goBack(){
+  update(){
     this.updateSaved = true;
   }
 }
