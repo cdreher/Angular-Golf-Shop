@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Callaway XR 16 Driver",
+        "brand": "Callaway",
+        "cat": "Driver",
+        "price": 249.99
+    },
+    {
+        "id": 2,
+        "name": "TaylorMade 2017 M2 Driver",
+        "brand": "TaylorMade",
+        "cat": "Driver",
+        "price": 299.99
+    },
+    {
+        "id": 3,
+        "name": "Titleist 716 AP1 Irons - Steel",
+        "brand": "Titleist",
+        "cat": "Iron Set",
+        "price": 799.99
+    },
+    {
+        "id": 4,
+        "name": "Tour Edge Hot Launch HL3 Triple Combo Set - Graphite",
+        "brand": "Tour Edge",
+        "cat": "Iron Set",
+        "price": 599.99
+    },
+    {
+        "id": 5,
+        "name": "Odyssey White Hot RX #1 SuperStroke Putter",
+        "brand": "Odyssey",
+        "cat": "Putter",
+        "price": 129.99
+    },
+    {
+        "id": 6,
+        "name": "Scotty Cameron 2018 Select Newport 2 Putter",
+        "brand": "Scotty Cameron",
+        "cat": "Putter",
+        "price": 399.99
+    }
+]

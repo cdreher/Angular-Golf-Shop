@@ -1,0 +1,16 @@
+div {
+    margin: auto;
+    padding: 10px
+}
+
+label {
+    float:left;
+    margin-right:7.5px;
+}
+
+#price{
+    width: 485px;
+}
+
+form .form-control{
+}

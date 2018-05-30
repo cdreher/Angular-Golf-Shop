@@ -1,0 +1,59 @@
+/* DashboardComponent's private CSS styles */
+[class*='col-'] {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+ 
+  h4 {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+    font-size: 110%;
+    color: #eee;
+    height: 100px;
+    background-color: #607D8B;
+    border-radius: 2px;
+  }
+ 
+  .grid-pad {
+    padding: 10px 0 0 10px;
+  }
+  .jawn img{
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .jawn img:hover {
+    background-color: #EEE;
+    cursor: pointer;
+    color: #607d8b;
+  }
+  .jawn h4:hover {
+    background-color: #EEE;
+    cursor: pointer;
+    color: #607d8b;
+  }
+  
+ 
+  ul {
+    list-style-type: none;
+    padding: 0;
+    width: 150px;
+    background-color: #f1f1f1;
+}
+
+li {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li:hover {
+    background-color: #555;
+    color: white;
+}

@@ -1,0 +1,60 @@
+<div>
+  <h1>Add a product!</h1>
+  <br>
+  <form #productForm="ngForm" (ngSubmit)="add()">
+    <div class="form-group" [ngClass]="{'has-error': prodName.touched && !prodName.valid }">
+      <h4>Product Name:</h4>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model.name" #prodName="ngModel" minlength="3" required>
+      <span *ngIf="prodName.touched && !prodName.valid">
+        <span *ngIf="prodName.errors.required">Please enter a product name.</span> 
+        <span *ngIf="prodName.errors.minlength">Product name must be at least 3 characters.</span>
+      </span>
+    </div> 
+    
+    <div class="form-group" [ngClass]="{'has-error': brand.touched && !brand.valid }">
+      <h4>Product Brand:</h4>
+      <input type="text" class="form-control" id="brand" name="brand" [(ngModel)]="model.brand" #brand="ngModel" minlength="3" required>
+      <span *ngIf="brand.touched && !brand.valid">
+        <span *ngIf="brand.errors.required">Please enter a product brand.</span> 
+        <span *ngIf="brand.errors.minlength">Product brand must be at least 3 characters.</span>
+      </span>
+    </div>
+      
+    <div class="form-group">
+      <h4>Product Category:</h4>
+      <select class="form-control" id="category" name="category"
+      [(ngModel)]="model.category" #category="ngModel" required>
+        <option value="Driver">Driver</option>
+        <option value="Fairway Wood">Fairway Wood</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="Iron Set">Iron Set</option>
+        <option value="Wedge">Wedge</option>
+        <option value="Putter">Putter</option>
+        <option value="Golf Balls">Golf Balls</option>
+        <option value="Headcover">Headcover</option>
+      </select>
+    </div>
+      
+    <div class="form-group"  [ngClass]="{'has-error': price.touched && !price.valid }">
+      <h4>Product Price:</h4>
+      <label for="#price">$</label>
+      <input type="text" class="form-control" id="price" name="price" [(ngModel)]="model.price" #price="ngModel" required>
+      <span *ngIf="price.touched && !price.valid">
+        <span *ngIf="price.errors.required">Please enter a product price.</span> 
+      </span>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': imageUrl.touched && !imageUrl.valid }">
+      <h4>Product Image URL:</h4>
+      <input type="text" #category class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="model.imageUrl" #imageUrl="ngModel" minlength="3" required>
+      <span *ngIf="imageUrl.touched && !imageUrl.valid">
+        <span *ngIf="imageUrl.errors.required">Please enter an image URL.</span> 
+        <span *ngIf="imageUrl.errors.minlength">Image URL must be at least 3 characters.</span>
+      </span>
+    </div>
+      
+    <br>
+    <button class="btn btn-primary"[disabled]="!productForm.form.valid" type="submit">Submit</button>
+  </form>
+  
+</div>

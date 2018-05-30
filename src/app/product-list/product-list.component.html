@@ -1,0 +1,64 @@
+<div style="margin-top: 50px;" class='row'></div>
+
+<div class='row'>
+  <div class="col-md-4"></div>
+  <div class="col-md-4"></div>
+</div>
+
+<div class="row container-fluid">
+  <div class="col-md-3"></div>
+  <div style="margin-right:100px;" class="col-md-7">
+    <div class="row">
+      <div style="margin-left:25px;" class="row">
+        <a id="link" routerLink="/home">Home:</a>
+        <label for="link">&nbsp;All Products</label>
+      </div>
+      <div class="row">
+        <div class="col-md-7">
+          <label style="margin-left:25px; margin-top: 10px; font-size: 14px; font-weight: normal">
+            Showing {{ isFiltered ? 'results' : 'all products' }}
+          </label>
+          <label style="font-weight: normal" *ngIf='isFiltered == true'>
+            &nbsp;for "{{listFilter}}"
+          </label>
+        </div>
+        <div class="col-md-3">
+          <label for="listFilter">Filter by:&nbsp;</label>
+          <input id='listFilter' name='listFilter' type='text' [(ngModel)] = 'listFilter'/>
+        </div>
+      </div> 
+      <div *ngIf='isFiltered'class="row">
+        <a style="margin-left:40px; cursor: pointer;"(click)='clear("")'>Show all</a>
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div style="top: -100px;"class="row container-fluid">
+  <div class="col-md-3" style="top: 50px; left: 250px; cursor: pointer">
+    <label for="list" >Categories</label>
+    <ul id="list" >
+        <li (click)="setFilter('driver')">Drivers</li>
+        <li (click)="setFilter('fairway wood')">Woods</li>
+        <li (click)="setFilter('hybrid')">Hybrids</li>
+        <li (click)="setFilter('iron set')">Iron Set</li>
+        <li (click)="setFilter('wedge')">Wedges</li>
+        <li (click)="setFilter('golf ball')">Golf Balls</li>
+        <li (click)="setFilter('headcover')">Headcovers</li>
+      </ul>
+  </div>
+  <div style="margin-top: 25px;" class="col-md-6">
+    <div class="grid grid-pad">
+      <h1 *ngIf='!filteredProducts.length'>No results.</h1>
+      <a *ngFor="let p of filteredProducts" class="col-1-4" routerLink='/products/{{p.id}}'>
+        <div class="jawn">
+          <img [src]="p.imageUrl" [alt]="p.name">
+          <h4>{{p.name}}</h4>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+

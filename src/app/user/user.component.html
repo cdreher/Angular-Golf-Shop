@@ -1,0 +1,24 @@
+<div style="margin: auto; width: 50%; padding: 10px">
+    <h1>User details</h1>
+    <br>
+    <form #userForm="ngForm" (ngSubmit)="save()">
+      <div class="form-group">
+        <h4>Username:</h4>
+        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" #username="ngModel" required>
+      </div> 
+      
+      <div class="form-group" [ngClass]="{'has-error': password.touched && !password.valid }">
+        <h4>Password:</h4>
+        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="3" required>
+        <span *ngIf="password.touched && !password.valid">
+          <span *ngIf="password.errors.required">Please enter a password.</span> 
+          <span *ngIf="password.errors.minlength">Password must be at least 3 characters.</span>
+        </span>
+      </div>
+        
+      <br>
+      <button class="btn btn-primary"[disabled]="!loginForm.form.valid" type="submit">Submit</button>
+      <div *ngIf='loginInvalid' class="alert alert-danger">Invalid login info</div>
+    </form>
+    
+  </div>
