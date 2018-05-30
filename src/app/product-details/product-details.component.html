@@ -16,13 +16,22 @@
 
 <div style="margin-top:50px;"class = "row container-fluid" *ngIf="product">
   <div class="col-md-3"></div>
-  <div style="width:350px; margin-left: 75px;"class="col-md-3">
-    <img [src]= "product.imageUrl">
-  </div>
-  <div class="content col-md-3">
-    <h3>{{ product.name }}</h3>
-    <p>{{ product.brand }}, {{ product.category }}</p>
-    <p class="price">{{ product.price | currency:USD }}</p>
-  </div>
+    <div style="width:350px; margin-left: 75px;"class="col-md-3">
+      <img [src]= "product.imageUrl">
+    </div>
+    <div class="content col-md-3">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.brand }}, {{ product.category }}</p>
+      <p class="price">{{ product.price | currency:USD }}</p>
+      <br>
+    
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input class="form-control" type="number" name="quantity" 
+            id="quantity" #quantity min="1" placeholder="1">
+        <br>
+      </div>
+      <button class="btn btn-primary" (click)="order(product, quantity.value)">Add to Cart</button>
+    </div>
   
 </div>

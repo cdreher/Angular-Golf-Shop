@@ -4,5 +4,6 @@ export class Product {
     brand: string;
     category: string;
     price: number;
-    imageUrl: string
+    imageUrl: string;
+    quantity: number;
 }

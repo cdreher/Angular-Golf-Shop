@@ -9,6 +9,10 @@
     <li *ngIf="isLoggedIn"><a routerLink='/add'>Add Product</a>
     </li>
     <div style="float: right;">
+        <li>
+            <a *ngIf="isLoggedIn" routerLink='/cart'>
+              <img style="height: 30px; width: 30px;"src="https://images.vexels.com/media/users/3/136826/isolated/preview/4751bdd75f3a5d3616fc98a8cc4dfa4a-shopping-cart-icon-by-vexels.png" alt="cart"></a>
+          </li>
        <li>
         <a *ngIf="isLoggedIn" routerLink='/user'>{{currentUser.username}}</a>
       </li>

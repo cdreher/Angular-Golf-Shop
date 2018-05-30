@@ -16,6 +16,7 @@ import { LoginComponent } from './login/login.component'
 import { AuthService } from './auth.service';
 import { UserComponent } from './user/user.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'add', component: AddProductComponent },
   { path:'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },
+  { path: 'cart', component: CartComponent},
   { path: 'user', component: UserComponent}
 ]
 
@@ -40,7 +42,8 @@ const routes: Routes = [
     AddProductComponent,
     LoginComponent,
     UserComponent,
-    SignUpComponent
+    SignUpComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
