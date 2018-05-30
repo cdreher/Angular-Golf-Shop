@@ -11,7 +11,8 @@ import { Router } from '@angular/router';
 })
 export class UserComponent implements OnInit {
   user: User;
-  private url = 'api/login';
+  updateSaved = false;
+  private url = 'api/users';
 
   constructor(private authService: AuthService, private http: HttpClient, private router: Router) { }
 
@@ -20,11 +21,13 @@ export class UserComponent implements OnInit {
   }
 
   save(){
-    return this.http.put(this.url, this.user, httpOptions).subscribe(() => this.goBack());
+    return this.http.put(this.url, this.user, httpOptions).subscribe(() => {
+      this.goBack();
+    });
   }
 
   goBack(){
-    this.router.navigate(['home'])
+    this.updateSaved = true;
   }
 }
 
