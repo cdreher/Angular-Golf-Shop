@@ -27,6 +27,8 @@ export class LoginComponent implements OnInit {
     this._authService.getUsers().subscribe(r => {
       this.users = r;
       this.currentUser = (this._authService.loginUser(this.users, {username, password} as User));
+      console.log(this.currentUser);
+      
       this._authService.setUser(this.currentUser);
 
       if(!this._authService.isAuthenticated()){

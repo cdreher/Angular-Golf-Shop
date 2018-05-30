@@ -3,7 +3,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 export class InMemDatabaseService implements InMemoryDbService{
   createDb() {
-    const login = [
+    const users = [
         {
             id:1,
             username: "cdreher",
@@ -144,7 +144,7 @@ export class InMemDatabaseService implements InMemoryDbService{
         imageUrl: "https://s7d2.scene7.com/is/image/dkscdn/SS14MXFLDLXZIPIRNS_is/"
     }
     ]; 
-    return {products, login};
+    return {products, users};
   }
  
 

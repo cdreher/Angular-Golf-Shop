@@ -21,8 +21,10 @@
       </div>
         
       <br>
-      <button class="btn btn-primary"[disabled]="!loginForm.form.valid" type="submit">Submit</button>
+      <button class="btn btn-primary"[disabled]="!loginForm.form.valid" type="submit">Log In</button>
       <div *ngIf='loginInvalid' class="alert alert-danger">Invalid login info</div>
     </form>
+    <br><br>
+    <h4>Don't have an account? <a routerLink='/signup'>Sign up here!</a></h4>
     
   </div>

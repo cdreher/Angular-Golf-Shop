@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component'
 import { AuthService } from './auth.service';
 import { UserComponent } from './user/user.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -26,6 +27,7 @@ const routes: Routes = [
   },
   { path: 'add', component: AddProductComponent },
   { path:'login', component: LoginComponent },
+  { path: 'signup', component: SignUpComponent },
   { path: 'user', component: UserComponent}
 ]
 
@@ -37,7 +39,8 @@ const routes: Routes = [
     DashComponent,
     AddProductComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

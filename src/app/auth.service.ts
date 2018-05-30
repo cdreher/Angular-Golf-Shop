@@ -9,13 +9,17 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private url='api/login';
+  private url='api/users';
   currentUser: User;
 
   constructor(private _http: HttpClient, private router: Router) { }
 
   loginUser(users: User[], user: User): User{
     return users.find(x => x.username === user.username && x.password === user.password);
+  }
+
+  signUp(user: User): Observable<User> {
+    return this._http.post<User>(this.url, user, httpOptions);
   }
 
   getUsers(): Observable<User[]>{

@@ -1,0 +1,30 @@
+<div style="margin: auto; width: 50%; padding: 10px">
+  <h1>Sign Up</h1>
+  <br>
+  <form #signUpForm="ngForm" (ngSubmit)="signup()">
+    <div class="form-group" [ngClass]="{'has-error': username.touched && !username.valid }">
+      <h4>Username:</h4>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="model.username" #username="ngModel" minlength="3" required>
+      <span *ngIf="username.touched && !username.valid">
+        <span *ngIf="username.errors.required">Please enter a username.</span> 
+        <span *ngIf="username.errors.minlength">Username must be at least 3 characters.</span>
+      </span>
+    </div> 
+    
+    <div class="form-group" [ngClass]="{'has-error': password.touched && !password.valid }">
+      <h4>Password:</h4>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="model.password" #password="ngModel" minlength="3" required>
+      <span *ngIf="password.touched && !password.valid">
+        <span *ngIf="password.errors.required">Please enter a password.</span> 
+        <span *ngIf="password.errors.minlength">Password must be at least 3 characters.</span>
+      </span>
+    </div>
+      
+    <br>
+    <button class="btn btn-primary"[disabled]="!signUpForm.form.valid" type="submit">Create Account</button>
+    <div *ngIf='createInvalid' class="alert alert-danger">User already exists</div>
+  </form>
+  <br><br>
+  <h4>Have an account already? <a routerLink='/login'>Go back to login now</a></h4>
+  
+</div>
