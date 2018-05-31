@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
-import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -24,13 +24,15 @@ export class LoginComponent implements OnInit {
     const username: string = this.model.username;
     const password: string = this.model.password;
 
+    //get all users, check if user credentials exist, log in accordingly
     this._authService.getUsers().subscribe(r => {
       this.users = r;
       this.currentUser = (this._authService.loginUser(this.users, {username, password} as User));
-      console.log(this.currentUser);
       
       this._authService.setUser(this.currentUser);
 
+      //if user credentials exist, log the user in
+      //otherwise display log in error
       if(!this._authService.isAuthenticated()){
         this.loginInvalid = true;
       } else {

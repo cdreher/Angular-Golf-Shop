@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from './auth.service';
 import { User } from './user';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -17,11 +17,11 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.isLoggedIn = this._authService.isAuthenticated();
-    console.log(this.isLoggedIn);
-    
+    //log in user is they are authenticated properly
+    this.isLoggedIn = this._authService.isAuthenticated();    
   }
 
+  //sign out user
   signOut(): void{
     this.isLoggedIn = false;
     this._authService.logout();

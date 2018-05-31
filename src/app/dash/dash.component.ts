@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../product';
-import { ProductService } from '../product.service';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-dash',
@@ -13,6 +13,7 @@ export class DashComponent implements OnInit {
   constructor(private _productService: ProductService) { }
 
   ngOnInit() {
+    //get all products for display on home page
     this._productService.getProducts().subscribe(r => this.products = r);
   }
 

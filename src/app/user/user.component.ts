@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
 import { User } from '../user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-user',
@@ -17,10 +17,12 @@ export class UserComponent implements OnInit {
   constructor(private authService: AuthService, private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
+    //get user
     this.authService.getUser().subscribe(response => this.user = response);
   }
 
   save(){
+    //save user to in memory database server
     return this.http.put(this.url, this.user, httpOptions).subscribe(() => {
       this.update();
     });

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../product.service';
 import { Product } from '../product';
 import { User } from '../user';
+import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-product-list',
@@ -27,23 +27,19 @@ export class ProductListComponent implements OnInit {
   constructor(private _srvc: ProductService) { }
 
   ngOnInit() {
+    //get all products
     this._srvc.getProducts().subscribe(response => {
       this.products = response;
-      console.log(this.products);
-      
     });
-    this._srvc.getProducts().subscribe(response => this.filteredProducts = response);
-    //this.filteredProducts = this.products;
-    //console.log(this.isFiltered);
-  }
 
-  hi(): void{
-    console.log("hi");
+    //display filtered products
+    this._srvc.getProducts().subscribe(response => this.filteredProducts = response);
   }
 
   performFilter(filter: string): Product[] {
-    console.log(filter);
     this.isFiltered = true;
+
+    //apply filter to list of products
     return this.products.filter((product: Product) => 
       product.name.toLocaleLowerCase().indexOf(filter) !== -1 ||
       product.brand.toLocaleLowerCase().indexOf(filter) !== -1 || 
@@ -55,6 +51,7 @@ export class ProductListComponent implements OnInit {
     this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
   }
 
+  //reset filter, displaying all products again
   clear(filter: string): void{
     this._listFilter = filter;
     this.filteredProducts = this.listFilter ? this.performFilter(this.listFilter) : this.products;
