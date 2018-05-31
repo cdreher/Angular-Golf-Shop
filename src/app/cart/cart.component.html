@@ -3,11 +3,13 @@
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <div class="row">
-      <div class="col-md-10">
+      <div class="col-md-9">
         <h2>Your Cart</h2>
       </div>
-      <div class="col-md-2">
-        <h2 style="font-weight: bold" *ngIf="totalPrice != 0" id="price">{{totalPrice | currency : 'USD' : true : '2.2-2'}}</h2>
+      <div class="col-md-3">
+        <h2 style="display: inline-block; font-size: 12px;" *ngIf="totalPrice != 0">TOTAL PRICE:</h2>
+        &nbsp;
+        <h2 style="display: inline-block; font-weight: bold" *ngIf="totalPrice != 0" id="price">{{totalPrice | currency : 'USD' : true : '2.2-2'}}</h2>
       </div>
     </div>
     <hr>
@@ -37,38 +39,38 @@
           <td>{{ p.price | currency : 'USD' : true : '2.2-2'}}</td>
           <td>{{ p.subtotal | currency : 'USD' : true : '2.2-2'}}</td>
           <td>
-            <button class="btn btn-danger" (click)='delete(p.place_in_cart)'>X</button>
-            &nbsp;
             <button class="glyphicon glyphicon-pencil btn btn-primary" type="button" data-toggle="modal" data-target="#exampleModal" (click)='setPlace(p.place_in_cart)'></button>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Update Quantity</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <form >
-                      <label for="quantityUpdater">Select a new value:</label>
-                      <input class="form-control" type="number" #quantityUpdater [placeholder]="p.quantity" [min]="1">
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='changeQuantity(quantityUpdater.value)'>Save changes</button>
-                  </div>
-                </div>
-              </div>
-            </div>  
-            <!-- end of modal -->
+            &nbsp;
+            <button class="btn btn-danger" (click)='delete(p.place_in_cart)'>X</button>
           </td>
           
         </tr>
       </tbody>
-    </table>        
+    </table>    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Quantity</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form >
+                <label for="quantityUpdater">Select a new value:</label>
+                <input class="form-control" type="number" #quantityUpdater [min]="1">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" (click)='changeQuantity(quantityUpdater.value)'>Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <!-- end of modal -->    
     <h4 style="margin: auto" *ngIf="!cartProducts.length">You have not added any products to  your cart.</h4>
 
   </div>
