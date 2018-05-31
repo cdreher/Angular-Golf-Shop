@@ -11,6 +11,7 @@ export class AppComponent {
   pageTitle = 'Golf Pro Shop';
   isLoggedIn = false;
   currentUser: User;
+  totalCartItems = 0;
 
   constructor(private _authService: AuthService) {
   }

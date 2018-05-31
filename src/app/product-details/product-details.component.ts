@@ -4,6 +4,7 @@ import { Product } from '../product';
 import { ProductService } from '../product.service';
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../cart.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-product-details',
@@ -15,7 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   cart: Product[];
   addToCartValid = false;
 
-  constructor(private route: ActivatedRoute, private service: ProductService, private cartService: CartService) { }
+  constructor(private route: ActivatedRoute, private service: ProductService, private cartService: CartService, private app: AppComponent) { }
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
@@ -29,8 +30,12 @@ export class ProductDetailsComponent implements OnInit {
     }
     this.product.quantity = +quan;
     this.product.subtotal = +quan * this.product.price;
+    //add product to cart
     this.cartService.addToCart(this.product);
+    //display success
     this.addToCartValid = true;
+    //change total cart items
+    this.app.totalCartItems += this.product.quantity;
   }
 
 }

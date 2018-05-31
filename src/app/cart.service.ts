@@ -10,7 +10,12 @@ export class CartService {
   constructor() { }
 
   addToCart(product: Product){
-    this.cartProducts.push(product);    
+    product.place_in_cart = (this.cartProducts.length);
+    console.log(product);
+    
+    this.cartProducts.push(product);  
+    console.log(this.cartProducts);
+    
   }
 
   getCartProducts(): Product[] {
