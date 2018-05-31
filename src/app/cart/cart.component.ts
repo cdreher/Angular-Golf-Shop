@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   cartProducts: Product[];
   totalPrice: number = 0.00;
   index: number =0;
+  product: Product = new Product();
 
   constructor(private cartService: CartService, private app: AppComponent) { }
 
@@ -43,6 +44,32 @@ export class CartComponent implements OnInit {
       this.totalPrice += p.subtotal;
       console.log(this.totalPrice);
     }
+  }
+
+  setPlace(id: number){
+    console.log("hi: " + id);
+    this.product = this.cartProducts.find(x => x.place_in_cart == id);
+    
+  }
+
+  //change product quantity in cart
+  changeQuantity(newQuantity: number){
+    console.log("id:" + this.product.place_in_cart);
+
+    this.product.quantity = +newQuantity;
+
+    //reset total price, subtotal, and total cart itmes
+    this.app.totalCartItems = 0;
+    this.totalPrice = 0;
+    this.product.subtotal = newQuantity * this.product.price;
+
+    //get total price and total cart items
+    for (let p of this.cartProducts){
+      this.app.totalCartItems += p.quantity;
+      this.totalPrice += p.subtotal;
+      console.log(this.totalPrice);
+    }
+
   }
 
 
