@@ -1,3 +1,49 @@
-<p>
-  cart works!
-</p>
+<br>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-md-10">
+        <h2>Your Cart</h2>
+      </div>
+      <div class="col-md-2">
+        <h2 style="font-weight: bold" *ngIf="totalPrice != 0" id="price">{{totalPrice | currency : 'USD' : true : '2.2-2'}}</h2>
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <table class="table" *ngIf="cartProducts.length">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Subtotal</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of cartProducts">
+          <th><img [src]="p.imageUrl" [alt]="p.name"></th>
+          <td>
+            <a style="font-weight: bold;" routerLink="/products/{{p.id}}">{{ p.name }}</a>
+          </td>
+          <td>{{ p.quantity }}</td>
+          <td>{{ p.price | currency : 'USD' : true : '2.2-2'}}</td>
+          <td>{{ p.subtotal | currency : 'USD' : true : '2.2-2'}}</td>
+          <td>
+            <button (click)='delete(p.place_in_cart)'>X</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>          
+    <h4 style="margin: auto" *ngIf="!cartProducts.length">You have not added any products to  your cart.</h4>
+
+  </div>
+</div>
+

@@ -6,4 +6,6 @@ export class Product {
     price: number;
     imageUrl: string;
     quantity: number;
+    subtotal: number;
+    place_in_cart: number;
 }

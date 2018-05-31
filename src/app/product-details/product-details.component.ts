@@ -13,6 +13,7 @@ import { CartService } from '../cart.service';
 export class ProductDetailsComponent implements OnInit {
   product: Product;
   cart: Product[];
+  addToCartValid = false;
 
   constructor(private route: ActivatedRoute, private service: ProductService, private cartService: CartService) { }
 
@@ -27,7 +28,9 @@ export class ProductDetailsComponent implements OnInit {
       quan = 1;
     }
     this.product.quantity = +quan;
+    this.product.subtotal = +quan * this.product.price;
     this.cartService.addToCart(this.product);
+    this.addToCartValid = true;
   }
 
 }

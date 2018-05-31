@@ -5,11 +5,15 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class CartService {
+  cartProducts: Product[] = [];
 
   constructor() { }
 
   addToCart(product: Product){
-    console.log(product);
-    
+    this.cartProducts.push(product);    
+  }
+
+  getCartProducts(): Product[] {
+    return this.cartProducts;
   }
 }
