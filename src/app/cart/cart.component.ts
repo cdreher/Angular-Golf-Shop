@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   totalPrice: number = 0.00;
   index: number =0;
   product: Product = new Product();
+  totalItems: number;
 
   constructor(private cartService: CartService, private app: AppComponent) { }
 
@@ -22,8 +23,8 @@ export class CartComponent implements OnInit {
     for (let p of this.cartProducts){
       this.totalPrice += p.subtotal;
       console.log(this.totalPrice);
-      
     }
+    this.totalItems = this.app.totalCartItems;
   }
 
   delete(id: number){
@@ -44,6 +45,7 @@ export class CartComponent implements OnInit {
       this.totalPrice += p.subtotal;
       console.log(this.totalPrice);
     }
+    this.totalItems = this.app.totalCartItems;
   }
 
   setPlace(id: number){
@@ -69,6 +71,7 @@ export class CartComponent implements OnInit {
       this.totalPrice += p.subtotal;
       console.log(this.totalPrice);
     }
+    this.totalItems = this.app.totalCartItems;
 
   }
 
