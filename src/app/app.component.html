@@ -23,12 +23,17 @@
                 <p style="margin-top: -15px; margin-left: 30px; font-size: 12px;">{{ totalCartItems }}</p>
               </a>
             </li>
-            <li>
-              <a *ngIf="isLoggedIn" routerLink='/user'>{{currentUser.username}}</a>
-            </li>
-            <li style="font-weight: bold; padding: 0 50px 0 0">
+            <li *ngIf="isLoggedIn" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: bold">
+                  {{ currentUser.username }}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink='/user'>User details</a>
+                  <a class="dropdown-item" style="font-weight: bold; cursor: pointer;" (click)='signOut()'>Sign Out</a>
+                </div>
+              </li>
+            <li style="font-weight: bold;">
               <a *ngIf="!isLoggedIn" routerLink='/login'>Login</a>
-              <a *ngIf="isLoggedIn" (click)='signOut()'>Sign Out</a>
             </li>
           </ul>
         </div>

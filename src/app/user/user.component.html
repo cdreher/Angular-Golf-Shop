@@ -1,24 +1,37 @@
-<div style="margin: auto; width: 50%; padding: 10px">
-    <h1>User details</h1>
-    <br>
-    <form #userForm="ngForm" (ngSubmit)="save()">
-      <div class="form-group">
-        <h4>Username:</h4>
-        <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" #username="ngModel" required>
-      </div> 
-      
-      <div class="form-group" [ngClass]="{'has-error': password.touched && !password.valid }">
-        <h4>Password:</h4>
-        <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="3" required>
-        <span *ngIf="password.touched && !password.valid">
-          <span *ngIf="password.errors.required">Please enter a password.</span> 
-          <span *ngIf="password.errors.minlength">Password must be at least 3 characters.</span>
+<div class="col-md-3"></div>
+<div style="padding: 10px" class="col-md-4">
+  <h1>User details</h1>
+  <br>
+  <form #userForm="ngForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <h4>Username:</h4>
+      <input type="text" class="form-control" id="username" name="username" [(ngModel)]="user.username" #username="ngModel" required>
+    </div> 
+    
+    <div class="form-group" [ngClass]="{'has-error': password.touched && !password.valid }">
+      <h4>Password:</h4>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)]="user.password" #password="ngModel" minlength="3" required>
+      <span *ngIf="password.touched && !password.valid">
+        <span *ngIf="password.errors.required">Please enter a password.</span> 
+        <span *ngIf="password.errors.minlength">Password must be at least 3 characters.</span>
+      </span>
+    </div>
+
+    <div class="form-group" [ngClass]="{'has-error': imageUrl.touched && !imageUrl.valid }">
+        <h4>Image URL:</h4>
+        <input type="text" class="form-control" id="imageUrl" name="imageUrl" [(ngModel)]="user.imageUrl" #imageUrl="ngModel" minlength="3" required>
+        <span *ngIf="imageUrl.touched && !imageUrl.valid">
+          <span *ngIf="imageUrl.errors.required">Please enter an image URL.</span> 
+          <span *ngIf="imageUrl.errors.minlength">Image URL must be at least 3 characters.</span>
         </span>
       </div>
-        
-      <br>
-      <button class="btn btn-primary" type="submit">Save</button>
-      <div *ngIf='updateSaved' class="alert alert-success">User info updated!</div>
-    </form>
-    
-  </div>
+      
+    <br>
+    <button class="btn btn-primary" type="submit">Save</button>
+    <div *ngIf='updateSaved' class="alert alert-success">User info updated!</div>
+  </form>
+  
+</div>
+<div class="col-md-3" style="display: inline-block">
+    <img [src]='user.imageUrl' style="height: auto; width: 100%">
+</div>

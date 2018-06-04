@@ -7,7 +7,8 @@ export class InMemDatabaseService implements InMemoryDbService{
         {
             id:1,
             username: "cdreher",
-            password: "test"
+            password: "test",
+            imageUrl: "https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg"
         }
     ];
     const products = [
