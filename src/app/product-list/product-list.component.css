@@ -11,8 +11,8 @@
     padding: 20px;
     text-align: center;
     font-size: 110%;
+    height: auto;
     color: #eee;
-    height: 100px;
     background-color: #607D8B;
     border-radius: 2px;
   }
@@ -20,18 +20,19 @@
   .grid-pad {
     padding: 10px 0 0 10px;
   }
-  .jawn img{
-    height: 200px;
-    width: 200px;
+  img{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
     border-radius: 5px;
     text-align: center;
   }
-  .jawn img:hover {
+  img:hover {
     background-color: #EEE;
     cursor: pointer;
     color: #607d8b;
   }
-  .jawn h4:hover {
+  h4:hover {
     background-color: #EEE;
     cursor: pointer;
     color: #607d8b;
