@@ -11,7 +11,7 @@
     padding: 20px;
     text-align: center;
     font-size: 110%;
-    height: auto;
+    height: 100px;
     color: #eee;
     background-color: #607D8B;
     border-radius: 2px;
@@ -21,7 +21,7 @@
     padding: 10px 0 0 10px;
   }
   img{
-    height: 100%;
+    height: auto;
     width: 100%;
     max-width: 100%;
     border-radius: 5px;

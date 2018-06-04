@@ -73,22 +73,14 @@ export class InMemDatabaseService implements InMemoryDbService{
         },
         {
             id: 8,
-            name: "PING G Hybrid",
-            brand: "PING",
+            name: "Cobra King '18 3 Iron Hybrid",
+            brand: "Cobra",
             category: "Hybrid",
             price: 179.00,
-            imageUrl: "https://imgs.2ndswing.com/images/clean-product/large/2016%20G%20NEW%20HYG.jpg"
+            imageUrl: "https://www.cobragolf.com/media/catalog/product/f/6/f6-hyb-gold_1_2.jpg"
         },
         {
             id: 9,
-            name: "Top Flite Gamer Tour Fairway Wood",
-            brand: "Top Flite",
-            category: "Fairway Wood",
-            price: 49.99,
-            imageUrl: "https://images.prod.meredith.com/product/c165ec8366b95e1e910141c8d24e56d7/1518325329932/l/top-flite-gamer-tour-hybrid-grey"
-        },
-        {
-            id: 10,
             name: "Cleveland CBX Wedge Steel",
             brand: "Cleveland",
             category: "Wedge",
@@ -96,7 +88,7 @@ export class InMemDatabaseService implements InMemoryDbService{
             imageUrl: "http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/5/2017/08/Cleveland-CBX-wedge-hero.png"
         },
         {
-            id: 11,
+            id: 10,
             name: "TaylorMade M3 Fairway Wood",
             brand: "TaylorMade",
             category: "Fairway Wood",
@@ -104,7 +96,7 @@ export class InMemDatabaseService implements InMemoryDbService{
             imageUrl: "https://imgs.2ndswing.com/images/clean-product/large/M3%20NEW%20FWG.jpg"
         },
         {
-            id: 12,
+            id: 11,
             name: "Titleist Vokey SM7 Wedge - Jet Black",
             brand: "Titleist",
             category: "Wedge",
@@ -112,7 +104,7 @@ export class InMemDatabaseService implements InMemoryDbService{
             imageUrl: "http://cdn.shopify.com/s/files/1/0057/4162/products/SM7_TC_50_Jet_Black_600x.jpg?v=1516893827"
         },
         {
-            id: 13,
+            id: 12,
             name: "Izzo Vintage Fairway Headcover",
             brand: "Izzo",
             category: "Headcover",
@@ -120,7 +112,7 @@ export class InMemDatabaseService implements InMemoryDbService{
             imageUrl: "https://static.golfonline.co.uk/media/img/vintage_xhyb_wht_nvy_red.300x400.jpg"
         },
         {
-            id: 14,
+            id: 13,
             name: "Titleist AVX",
             brand: "Titleist",
             category: "Golf Balls",
@@ -128,7 +120,7 @@ export class InMemDatabaseService implements InMemoryDbService{
             imageUrl: "http://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/5/2018/04/Titleist-AVX-Golf-Balls-Introduced-630x473.jpg"
         },
         {
-            id: 15,
+            id: 14,
             name: "Srixon Z-STAR XV Golf Balls",
             brand: "Srixon",
             category: "Golf Balls",
