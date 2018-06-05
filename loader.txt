@@ -44,6 +44,10 @@ $item-delay: 0s
     height: $item-size
     background: #ffe272
     transform: translateY(-$item-size*3.25)
+    
+    
+OTHER LINKS:
+https://codepen.io/hi1986ro/pen/gdtum
   
     
 
