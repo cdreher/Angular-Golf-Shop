@@ -1,9 +1,10 @@
-*possible loader to be used*
-# HTML
+Possible loader to use....
+HTML
 ul.loader
   -for (var x = 1; x < 5; x++)
     li(class="item-" + x)
-# CSS
+    
+CSS
 $background-color: hsl(0, 0, 15)
 
 body
