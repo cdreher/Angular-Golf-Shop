@@ -1,0 +1,161 @@
+HTML:
+<div class="container">
+  
+  <!-- c -->
+
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> -->
+<svg class="c" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1023.491px" height="994.614px" viewBox="0 0 1023.491 994.614" enable-background="new 0 0 1023.491 994.614"
+	 xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#46483E" d="M308.993,0c-19.289,0-37.011,10.15-46.57,26.798L7.053,470.529
+	C2.641,478.035,0.349,486.448,0,494.96c0,0.765,0,3.964,0,4.587c0.349,8.481,2.641,16.89,7.053,24.502l255.37,443.735
+	c9.559,16.541,27.281,26.83,46.57,26.83l687.653-0.975c9.52,0,18.417-4.968,23.143-13.381c4.936-8.235,4.936-18.417,0-26.62
+	L868.752,689.927c-9.868-16.68-27.385-26.83-46.499-26.83H501.007c-19.15,0-36.872-10.146-46.396-26.758l-64.677-112.29
+	c-4.829-8.374-7.192-17.516-7.192-26.865c0-9.139,2.363-18.523,7.192-26.655l64.677-112.254
+	c9.523-16.612,27.246-26.794,46.396-26.794h321.246c19.114,0,36.698-10.288,46.499-26.865l151.038-263.64
+	c4.936-8.271,4.936-18.595,0-26.794c-4.726-8.167-13.623-13.313-23.143-13.313L308.993,0z"/>
+</svg>
+  
+<!-- d -->
+
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<!-- Generator: Adobe Illustrator 17.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> -->
+<svg class="d" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="200px"
+	 width="557.079px" height="999.367px" viewBox="0 0 557.079 999.367" enable-background="new 0 0 557.079 999.367"
+	 xml:space="preserve">
+<path fill-rule="evenodd" clip-rule="evenodd" fill="#46483E" stroke="#000000" stroke-miterlimit="10" d="M393.8,1.9
+	c-4.65-2.588-10.312-2.53-14.905,0.165c-4.592,2.694-7.413,7.617-7.413,12.938v381.239c0,3.746-2.004,7.22-5.252,9.097
+	c-3.25,1.877-7.238,1.877-10.488,0l-62.223-35.848c-9.28-5.351-20.72-5.341-29.981,0.01L15.01,512.924
+	C5.72,518.283,0,528.187,0,538.908v286.925c0,10.719,5.72,20.623,15.002,25.974l248.517,143.53c9.28,5.369,20.72,5.369,30.001,0.018
+	l248.557-143.548c9.282-5.351,15.002-15.255,15.002-25.974V110.632c0-10.876-5.895-20.906-15.391-26.207L393.8,1.9z
+	 M370.743,731.545c0,2.686-1.438,5.156-3.756,6.499l-85.336,49.187c-2.315,1.341-5.154,1.341-7.471,0l-85.336-49.187
+	c-2.325-1.343-3.754-3.813-3.754-6.499v-98.497c0-2.676,1.429-5.156,3.746-6.499l85.326-49.283c2.335-1.343,5.174-1.343,7.509,0
+	l85.316,49.283c2.335,1.343,3.756,3.823,3.756,6.499V731.545z"/>
+</svg>
+  
+  <svg class="bg-hex" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 882.77 1004.835" enable-background="new 0 0 882.77 1004.835"
+		 xml:space="preserve">
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#3a3a3a" 
+  stroke="#B3B3B3" stroke-miterlimit="10" d="M417.56,6.373
+		c14.71-8.498,32.846-8.498,47.555,0l393.86,227.282c14.729,8.498,23.795,24.193,23.795,41.201v454.925
+		c0,16.993-9.066,32.688-23.779,41.17l-393.86,227.5c-14.725,8.511-32.861,8.511-47.587,0l-393.768-227.5
+		C9.066,762.47,0,746.775,0,729.782V274.842c0-16.993,9.066-32.688,23.792-41.186L417.56,6.373z"/>
+	</svg>
+  
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.8/TweenMax.min.js"></script>
+
+
+CSS:
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #F5F5F5;
+  margin: 0;
+  padding: 0;
+}
+svg {
+  width: 30%;
+  height: 100%;
+  min-height: 400px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+}
+path { 
+   stroke: #46483e;
+}
+.container {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+}
+.hexbox {
+	position: relative;
+	width: 30%;
+	display: inline-block;
+  margin-top: 5%; /*b/c codepen became cross with my layout*/
+}
+.hex, .bg-hex {
+	width: 100%;
+}
+.bg-hex {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 1;
+	transform: scale(0);
+	fill-opacity: 1;
+}
+.hex {
+  fill: #F5F5F5;
+	fill-opacity: 0;
+	stroke-dasharray: 4000;
+  	stroke-dashoffset: 4000;
+	stroke-width: 10;
+}
+.hex path {
+	transform-origin: center center;
+}
+.d {
+	margin-top: -2.5%;
+	stroke-dasharray: 4000;
+  	stroke-dashoffset: 4000;
+  	stroke-width: 5;
+  	fill-opacity: 0;
+}
+.c {
+	margin-left: -5%;
+	margin-top: 5%;
+	fill: #46483e;
+	stroke-dasharray: 5000;
+  	stroke-dashoffset: 5000;
+  	stroke-width: 8;
+  	fill-opacity: 0;
+}
+
+
+JS:
+$(document).ready(function(){
+  
+  var bg = $('.bg-hex');
+  var bgPath = $('.bg-hex path');
+  var hex = $('.hex path');
+  var hexPath = $('.hex path');
+  
+  var d = $('.d');
+  var dPath =$('.d path');
+  
+  var c = $('.c');
+  var cPath = $('.c');
+  
+  var animate = setTimeout(function(){
+    TweenMax.to(hex,2,{css:{strokeDashoffset:0,rotaion: -180} });
+    TweenMax.to(hex,2,{css:{fillOpacity:1,rotation: -180}, delay:2});
+    
+    TweenMax.to(d,2,{css:{strokeDashoffset:0},delay:2});
+    TweenMax.to(d,1,{css:{fillOpacity:1}, delay:3});
+    
+    TweenMax.to(c,2,{css:{strokeDashoffset:0},delay:2});
+    TweenMax.to(c,1,{css:{fillOpacity: 1},delay:3});
+    
+    TweenMax.to(bg,4,{css:{scale:50},delay:4});
+    TweenMax.to(hex,.1,{css:{strokeOpacity:0},delay:4});
+  },500);
+});
