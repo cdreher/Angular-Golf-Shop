@@ -57,4 +57,9 @@ li {
 li:hover {
     background-color: #555;
     color: white;
+    cursor: pointer;
+}
+
+a {
+  cursor: pointer;
 }

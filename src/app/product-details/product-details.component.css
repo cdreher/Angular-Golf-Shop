@@ -1,11 +1,10 @@
 img {
-    height: 300px;
-    width: 300px;
-    position: absolute;
+    height: auto;
+    width: 100%;
     float: right;
 }
 .content{ 
-    position: relative; 
+    padding-left: 50px;
    
 }
 h3 {

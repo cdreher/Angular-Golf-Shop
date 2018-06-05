@@ -35,7 +35,8 @@
 </div>
 
 <div style="top: -100px;"class="row container-fluid">
-  <div class="col-md-3 col-sm-3 col-xs-3">
+  <div class="col-md-1"></div>
+  <div class="col-md-2 col-sm-3 col-xs-3">
     <label for="list" >Categories</label>
     <ul id="list" >
         <li (click)="setFilter('driver')">Drivers</li>
@@ -51,7 +52,7 @@
     <div class="grid grid-pad">
       <h1 *ngIf='!filteredProducts.length'>No results.</h1>
       <div class="col">
-        <a *ngFor="let p of filteredProducts" class="col-md-3 col-sm-4 col-xs-6" routerLink='/products/{{p.id}}'>
+        <a *ngFor="let p of filteredProducts" class="col-md-3 col-sm-4 col-xs-6" routerLink='/products/{{p.id}}' data-aos="fade-zoom-in" data-aos-duration="1000">
           <img [src]="p.imageUrl" [alt]="p.name">
           <h4>{{p.name}}</h4>
         </a>

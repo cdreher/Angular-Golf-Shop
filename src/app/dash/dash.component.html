@@ -1,10 +1,10 @@
 <div class="header">
     <h1>Play The Best</h1>
-    <h3 class="subtitle"><a routerLink="/products">SEE ALL PRODUCTS&nbsp;></a></h3>
+    <h3 class="subtitle animated zoomInDown" style="animation-duration: 6s; animation-delay: -3s"><a routerLink="/products">SEE ALL PRODUCTS&nbsp;></a></h3>
 </div>
-<div class="grid grid-pad" style="padding-left: 15px">
-    <a *ngFor="let p of products" class="col-1-4" routerLink='/products/{{p.id}}'>
-        <div class="module p">
+<div class="grid grid-pad" style="padding-left: 15px" >
+    <a *ngFor="let p of products" class="col-1-4" routerLink='/products/{{p.id}}' >
+        <div class="module p" data-aos="zoom-out-left" data-aos-duration="1000">
         <h4>{{p.name}}</h4>
         </div>
     </a>
