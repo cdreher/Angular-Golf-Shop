@@ -4,7 +4,16 @@ This is a basic golf shop, developed with Angular 5 CLI & Visual Studio Code. Us
 ## Overview
 - everything is locally stored on an in-memory-database server, such as **users and products**
 - the users are locally stored, so each time the server is refreshed, you will have to recreate your account
-- at every refresh, you will have to log in (**sorry**) 
+- at every refresh, you will have to log in (**sorry**)
+
+To run using Angular CLI, first install `npm` and then install `@angular/cli`:
+
+    npm install
+    npm install -g @angular/cli
+    
+Then simply run using:
+
+    ng s --o
 
 ## Home Page
 The landing page was set up using basic Angular principles, coupled with bootstrap styling. Each product card is wired with Angular routing.
